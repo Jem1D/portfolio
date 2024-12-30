@@ -32,7 +32,7 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
-// LuGraduationCap
+
 export const experiencesData = [
   {
     title: "Teaching Aide - Physics Lab",
