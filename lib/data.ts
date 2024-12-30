@@ -1,10 +1,10 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaChalkboardTeacher, FaLaptopCode, FaPython, FaReact, FaServer } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import aasmatechImg from "@/public/aasmatech.png";
+import satelliteAnalysisImg from "@/public/PV.png";
+import cpuSimulatorImg from "@/public/cpuScheduling.png";
 
 export const links = [
   {
@@ -32,76 +32,89 @@ export const links = [
     hash: "#contact",
   },
 ] as const;
-
+// LuGraduationCap
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Teaching Aide - Physics Lab",
+    location: "Arizona State University, Tempe, AZ",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Currently managing laboratory operations, assisting students in understanding physics concepts and lab techniques, and providing constructive feedback on lab reports.",
+    icon: React.createElement(FaChalkboardTeacher),
+    date: "August 2024 - Present",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Website Development Intern",
+    location: "Aasma Technology Solutions, Ahmedabad, India",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Worked with AasmaTech during my final year Internship where I designed and developed the company's website using React.js and Node.js",
+    icon: React.createElement(FaLaptopCode),
+    date: "January 2024 - June 2024",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Software Development Intern",
+    location: "Capgemini Technologies, Gandhinagar, India",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Collaborated on building a Python library using Flask for ABHA APIs, enabling secure handling of medical health records in compliance with healthcare protocols.",
+    icon: React.createElement(FaPython),
+    date: "June 2023 - July 2023",
+  },
+  {
+    title: "Backend Development Intern",
+    location: "Gainserv Technologies, Surat, India",
+    description:
+      "Developed dynamic web pages using EJS templates, integrated MongoDB databases and implemented user authentication.",
+    icon: React.createElement(FaServer),
+    date: "May 2022 - July 2022",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Aasmatech Website",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I developed the official website for Aasmatech during my internship. The site facilitates scalable content management and showcases the company’s services effectively.",
+    tags: ["React.js", "Node.js", "Git", "Contentful", "Vercel", "Agile"],
+    imageUrl: aasmatechImg,
   },
   {
-    title: "rmtDev",
+    title: "Photovoltaic Satellite Image Analysis",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "A deep learning framework using U-Net for pixel-level segmentation and ResNet18 for binary classification on photovoltaic satellite imagery.",
+    tags: ["Python", "Deep Learning", "U-Net", "ResNet18", "AI"],
+    imageUrl: satelliteAnalysisImg,
   },
   {
-    title: "Word Analytics",
+    title: "CPU Scheduling Algorithm Simulator",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A web-based simulator for visualizing CPU scheduling algorithms. Includes Gantt Chart visualizations and key performance metrics computation.",
+    tags: ["Algorithm", "OS", "JavaScript", "React.js", "Chart.js"],
+    imageUrl: cpuSimulatorImg,
   },
 ] as const;
 
 export const skillsData = [
+  "Python",
+  "C++",
   "HTML",
   "CSS",
   "JavaScript",
   "TypeScript",
+  "REST APIs",
   "React",
+  "Express",
   "Next.js",
   "Node.js",
+  "Flask",
   "Git",
-  "Tailwind",
-  "Prisma",
   "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+  "MySQL",
+  "Workbench",
+  "Google Colaboratory",
+  "Jupyter Notebook",
+  "Padas",
+  "Numpy",
+  "Docker",
+  "MS Office",
+  "VMWare Workstation",
+  "Agile"
 ] as const;
