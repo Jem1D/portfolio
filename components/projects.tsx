@@ -13,11 +13,15 @@ export default function Projects() {
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My projects</SectionHeading>
       <div>
-        {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
-          </React.Fragment>
-        ))}
+      {projectsData.map((project, index) => (
+  <Project
+    key={index}
+    {...project}
+    index={index}
+    side={index % 2 === 1 ? "right" : "left"} // alternate sides
+  />
+))}
+
       </div>
     </section>
   );

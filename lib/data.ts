@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import aasmatechImg from "@/public/aasmatech.png";
 import satelliteAnalysisImg from "@/public/PV.png";
 import cpuSimulatorImg from "@/public/cpuScheduling.png";
+import sparkFoodDelivery from "@/public/sparkFoodDelivery.png";
 
 export const links = [
   {
@@ -70,6 +71,13 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Review Analysis of Food Delivery Apps",
+    description:
+      "Analyzed 1.6M Google Play Store reviews for DoorDash, Uber Eats, and Grubhub using Apache Spark on Databricks.",
+    tags: ["Apache Spark", "Databricks", "AWS S3", "SparkSQL", "Visualization"],
+    imageUrl: sparkFoodDelivery,
+  },
+  {
     title: "Aasmatech Website",
     description:
       "I developed the official website for Aasmatech during my internship. The site facilitates scalable content management and showcases the company’s services effectively.",
@@ -95,8 +103,10 @@ export const projectsData = [
 export const skillsData = [
   "Python",
   "C++",
+  "JAVA",
+  "Databricks",
+  "CI/CD pipelines",
   "HTML",
-  "CSS",
   "JavaScript",
   "TypeScript",
   "REST APIs",
@@ -108,11 +118,9 @@ export const skillsData = [
   "Git",
   "MongoDB",
   "MySQL",
-  "Workbench",
+  "AWS",
   "Google Colaboratory",
-  "Jupyter Notebook",
-  "Padas",
-  "Numpy",
+  "Apache Spark",
   "Docker",
   "MS Office",
   "VMWare Workstation",
