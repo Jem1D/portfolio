@@ -18,7 +18,7 @@ export default function Projects() {
     key={index}
     {...project}
     index={index}
-    side={index % 2 === 1 ? "right" : "left"} // alternate sides
+    side={index % 2 === 1 ? "left" : "right"} // alternate sides
   />
 ))}
 

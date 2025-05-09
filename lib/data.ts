@@ -6,7 +6,7 @@ import aasmatechImg from "@/public/aasmatech.png";
 import satelliteAnalysisImg from "@/public/PV.png";
 import cpuSimulatorImg from "@/public/cpuScheduling.png";
 import sparkFoodDelivery from "@/public/sparkFoodDelivery.png";
-
+import genAILLMImg from "@/public/genAILLMImg.png"
 export const links = [
   {
     name: "Home",
@@ -70,6 +70,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "GenAI-LLM Email Generator",
+    description:
+      "A generative AI tool for automating personalized email creation using LangChain, Groq LLM, and ChromaDB, achieving 80% reduction in drafting time.",
+    tags: ["AI", "NLP", "LangChain", "Groq LLM", "ChromaDB"],
+    imageUrl: genAILLMImg,
+  },
   {
     title: "Review Analysis of Food Delivery Apps",
     description:
