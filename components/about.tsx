@@ -19,12 +19,10 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        
-
-        I hold a degree in <span className="font-bold">Computer Engineering </span> and am currently pursuing a Master of Science in Computer Science at <span className="font-bold">Arizona State University</span>. Over the years, I’ve developed a deep passion for creating impactful software solutions and tackling challenging problems. My journey has taken me through diverse projects, from building deep learning models to designing scalable web applications. My core stack includes <span className="font-bold"> Python, React.js, Node.js, and MongoDB</span>, and I’m always eager to expand my knowledge by exploring new technologies and frameworks.
+        I hold a degree in <span className="font-bold">Computer Engineering</span> and am currently pursuing a Master of Science in Computer Science at <span className="font-bold">Arizona State University</span>. My journey as a developer has been shaped by my passion for building impactful software solutions and solving complex problems. I've worked on a wide range of projects, from creating generative AI tools and cloud-based ETL pipelines to developing scalable web applications. My core stack includes <span className="font-bold">Python, JavaScript, React.js, Node.js, and AWS</span>, and I’m always exploring new technologies to enhance my skills.
       </p>
       <p className="mb-3">
-        What excites me most about programming is the blend of <span className="font-bold"> creativity</span> and <span className="font-bold">logic</span> it demands—the thrill of finding elegant solutions to complex problems is unmatched. I’m currently seeking opportunities to contribute as a software developer while continuing to grow professionally.
+        What excites me most about programming is the perfect balance of <span className="font-bold">creativity</span> and <span className="font-bold">logic</span>—the thrill of crafting solutions that are both innovative and efficient. I’m constantly seeking opportunities to contribute as a software developer while continuing to grow and evolve in the tech landscape.
       </p>
 
       <p>

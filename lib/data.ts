@@ -111,6 +111,7 @@ export const skillsData = [
   "Python",
   "C++",
   "JAVA",
+  "Langchain",
   "Databricks",
   "CI/CD pipelines",
   "HTML",
