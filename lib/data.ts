@@ -125,7 +125,7 @@ export const projectsData = [
       "A web-based simulator for visualizing CPU scheduling algorithms. Includes Gantt Chart visualizations and key performance metrics computation.",
     tags: ["Algorithm", "OS", "JavaScript", "React.js", "Chart.js"],
     imageUrl: cpuSimulatorImg,
-    link: "https://github.com/Jem1D/CpuScheduling-Simulation"
+    link: "https://jeminbutani.github.io/CpuScheduling/"
   },
 ] as const;
 
