@@ -7,6 +7,7 @@ import satelliteAnalysisImg from "@/public/PV.png";
 import cpuSimulatorImg from "@/public/cpuScheduling.png";
 import sparkFoodDelivery from "@/public/sparkFoodDelivery.png";
 import genAILLMImg from "@/public/genAILLMImg.png"
+import asuccessful from "@/public/asu-ccessfulMatch.png"
 export const links = [
   {
     name: "Home",
@@ -36,12 +37,20 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Teaching Fellow – Computer Information Systems",
+    location: "Arizona State University, Tempe, AZ",
+    description:
+      "Conducting instructional sessions on AWS Cloud Foundations for high school students across the U.S. under the National Education Equity Lab (NEEL) initiative and fostering engagement in cloud computing fundamentals.",
+    icon: React.createElement(FaChalkboardTeacher),
+    date: "July 2025 – Present",
+  },
+  {
     title: "Teaching Aide - Physics Lab",
     location: "Arizona State University, Tempe, AZ",
     description:
       "Currently managing laboratory operations, assisting students in understanding physics concepts and lab techniques, and providing constructive feedback on lab reports.",
     icon: React.createElement(FaChalkboardTeacher),
-    date: "August 2024 - Present",
+    date: "August 2024 - May 2025",
   },
   {
     title: "Website Development Intern",
@@ -53,7 +62,7 @@ export const experiencesData = [
   },
   {
     title: "Software Development Intern",
-    location: "Capgemini Technologies, Gandhinagar, India",
+    location: "Capgemini, Gandhinagar, India",
     description:
       "Collaborated on building a Python library using Flask for ABHA APIs, enabling secure handling of medical health records in compliance with healthcare protocols.",
     icon: React.createElement(FaPython),
@@ -71,11 +80,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "ASU-ccessful-Match",
+    description:
+      "Peer-learning platform using Zoom API for automated study session creation with personalized matching, one-click scheduling, and resource sharing.",
+    tags: ["EdTech", "Zoom API", "Automation", "Peer Learning"],
+    imageUrl: asuccessful,
+    link: "https://asu-ccessful-match.vercel.app/"
+  },
+  {
     title: "GenAI-LLM Email Generator",
     description:
       "A generative AI tool for automating personalized email creation using LangChain, Groq LLM, and ChromaDB, achieving 80% reduction in drafting time.",
     tags: ["AI", "NLP", "LangChain", "Groq LLM", "ChromaDB"],
     imageUrl: genAILLMImg,
+    link: "https://github.com/Jem1D/GenAI-LLM-email-generator"
   },
   {
     title: "Review Analysis of Food Delivery Apps",
@@ -83,6 +101,7 @@ export const projectsData = [
       "Analyzed 1.6M Google Play Store reviews for DoorDash, Uber Eats, and Grubhub using Apache Spark on Databricks.",
     tags: ["Apache Spark", "Databricks", "AWS S3", "SparkSQL", "Visualization"],
     imageUrl: sparkFoodDelivery,
+    link: "https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1567321552716792/4456928712193064/7280967672729326/latest.html"
   },
   {
     title: "Aasmatech Website",
@@ -90,6 +109,7 @@ export const projectsData = [
       "I developed the official website for Aasmatech during my internship. The site facilitates scalable content management and showcases the company’s services effectively.",
     tags: ["React.js", "Node.js", "Git", "Contentful", "Vercel", "Agile"],
     imageUrl: aasmatechImg,
+    link: "https://aasmatech.com/"
   },
   {
     title: "Photovoltaic Satellite Image Analysis",
@@ -97,6 +117,7 @@ export const projectsData = [
       "A deep learning framework using U-Net for pixel-level segmentation and ResNet18 for binary classification on photovoltaic satellite imagery.",
     tags: ["Python", "Deep Learning", "U-Net", "ResNet18", "AI"],
     imageUrl: satelliteAnalysisImg,
+    link: "/"
   },
   {
     title: "CPU Scheduling Algorithm Simulator",
@@ -104,6 +125,7 @@ export const projectsData = [
       "A web-based simulator for visualizing CPU scheduling algorithms. Includes Gantt Chart visualizations and key performance metrics computation.",
     tags: ["Algorithm", "OS", "JavaScript", "React.js", "Chart.js"],
     imageUrl: cpuSimulatorImg,
+    link: "https://github.com/Jem1D/CpuScheduling-Simulation"
   },
 ] as const;
 
