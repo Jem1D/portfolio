@@ -37,10 +37,19 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "XR Technical Intern",
+    location: "Mesh Labs, Arizona State University, Tempe, AZ",
+    description:
+      "Built and tested multiplayer VR medical training simulations in Unity using C# and XR Toolkit, integrating triage, treatment, and rescue scenarios to enhance realism and collaborative team performance.",
+    icon: React.createElement(FaLaptopCode),
+    date: "August 2025 – Present",
+  },
+
+  {
     title: "Teaching Fellow – Computer Information Systems",
     location: "Arizona State University, Tempe, AZ",
     description:
-      "Conducting instructional sessions on AWS Cloud Foundations for high school students across the U.S. under the National Education Equity Lab (NEEL) initiative and fostering engagement in cloud computing fundamentals.",
+      "Conducted instructional sessions on AWS Cloud Foundations for high school students across the U.S. under the National Education Equity Lab (NEEL) initiative and fostered engagement in cloud computing fundamentals.",
     icon: React.createElement(FaChalkboardTeacher),
     date: "July 2025 – Present",
   },
@@ -48,7 +57,7 @@ export const experiencesData = [
     title: "Teaching Aide - Physics Lab",
     location: "Arizona State University, Tempe, AZ",
     description:
-      "Currently managing laboratory operations, assisting students in understanding physics concepts and lab techniques, and providing constructive feedback on lab reports.",
+      "Managed laboratory operations, assisted students in understanding physics concepts and lab techniques, and provided constructive feedback on lab reports.",
     icon: React.createElement(FaChalkboardTeacher),
     date: "August 2024 - May 2025",
   },
