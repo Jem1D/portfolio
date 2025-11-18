@@ -165,3 +165,62 @@ export const skillsData = [
   "VMWare Workstation",
   "Agile"
 ] as const;
+
+
+
+type SourceItem = { id: string; file: string; text: string }
+
+/**
+ * Convert structured profile exports into plain text entries for embeddings
+ */
+export function getAllProfileTexts(): SourceItem[] {
+  const out: SourceItem[] = []
+
+  // about or intro text if you exported one
+  if (typeof (exports as any).about === "string") {
+    out.push({ id: "about", file: "about", text: (exports as any).about })
+  }
+
+  // links as simple entry
+  if (Array.isArray((exports as any).links)) {
+    const linkText = (exports as any).links.map((l: any) => `${l.name} ${l.hash}`).join("\n")
+    out.push({ id: "links", file: "links", text: `Navigation links\n\n${linkText}` })
+  }
+
+  // projects
+  if (Array.isArray((exports as any).projectsData)) {
+    ;(exports as any).projectsData.forEach((p: any, i: number) => {
+      const textParts = [
+        `Title: ${p.title || ""}`,
+        `Description: ${p.description || ""}`,
+        `Tags: ${Array.isArray(p.tags) ? p.tags.join(", ") : p.tags || ""}`,
+        `Link: ${p.link || p.repo || ""}`
+      ]
+      out.push({ id: `project-${i}`, file: `project-${i}`, text: textParts.join("\n\n") })
+    })
+  }
+
+  // experiences
+  if (Array.isArray((exports as any).experiencesData)) {
+    ;(exports as any).experiencesData.forEach((e: any, i: number) => {
+      const text = [
+        `Title: ${e.title || ""}`,
+        `Location: ${e.location || ""}`,
+        `Description: ${e.description || ""}`,
+        `Date: ${e.date || ""}`
+      ].join("\n\n")
+      out.push({ id: `exp-${i}`, file: `exp-${i}`, text })
+    })
+  }
+
+  // skills
+  if (Array.isArray((exports as any).skillsData)) {
+    out.push({
+      id: "skills",
+      file: "skills",
+      text: `Skills\n\n${(exports as any).skillsData.join(", ")}`
+    })
+  }
+
+  return out
+}

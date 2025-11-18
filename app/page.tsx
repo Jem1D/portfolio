@@ -5,6 +5,7 @@ import Intro from "@/components/intro";
 import Projects from "@/components/projects";
 import SectionDivider from "@/components/section-divider";
 import Skills from "@/components/skills";
+// import ChatWidget from "@/components/ChatWidget"
 
 export default function Home() {
   return (
