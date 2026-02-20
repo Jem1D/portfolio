@@ -17,27 +17,71 @@ export default function ChatWidget() {
         return () => window.removeEventListener("keydown", onKey)
     }, [])
 
+    // async function send() {
+    //     if (!q.trim()) return
+    //     const question = q.trim()
+    //     setLoading(true)
+    //     setHistory((h) => [...h, { q: question, loading: true }])
+    //     try {
+    //         const res = await fetch("/api/query", {
+    //             method: "POST",
+    //             headers: { "content-type": "application/json" },
+    //             body: JSON.stringify({ q: question })
+    //         })
+    //         const data = await res.json()
+    //         const answer = data?.answer ?? "I do not know"
+    //         const sources = data?.sources ?? []
+    //         setHistory((h) => h.slice(0, -1).concat([{ q: question, a: answer, sources }]))
+    //         setQ("")
+    //         setTimeout(() => {
+    //             panelRef.current?.scrollTo({ top: panelRef.current.scrollHeight, behavior: "smooth" })
+    //         }, 50)
+    //     } catch (err) {
+    //         setHistory((h) => h.slice(0, -1).concat([{ q: question, a: "Error contacting server" }]))
+    //     } finally {
+    //         setLoading(false)
+    //     }
+    // }
     async function send() {
         if (!q.trim()) return
         const question = q.trim()
         setLoading(true)
         setHistory((h) => [...h, { q: question, loading: true }])
+        
         try {
             const res = await fetch("/api/query", {
                 method: "POST",
-                headers: { "content-type": "application/json" },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ q: question })
             })
+            
             const data = await res.json()
+            
+            // Check if the response status is 4xx or 5xx
+            if (!res.ok) {
+                console.error("Backend Error Response:", data)
+                throw new Error(data.error || "Server returned an error status")
+            }
+
             const answer = data?.answer ?? "I do not know"
             const sources = data?.sources ?? []
+            
             setHistory((h) => h.slice(0, -1).concat([{ q: question, a: answer, sources }]))
             setQ("")
+            
             setTimeout(() => {
                 panelRef.current?.scrollTo({ top: panelRef.current.scrollHeight, behavior: "smooth" })
             }, 50)
-        } catch (err) {
-            setHistory((h) => h.slice(0, -1).concat([{ q: question, a: "Error contacting server" }]))
+            
+        } catch (err: any) {
+            // Keep the error in the console for your own debugging
+            console.error("Fetch caught an error:", err)
+            
+            // Show a friendly, generic message to the user instead of the raw error
+            setHistory((h) => h.slice(0, -1).concat([{ 
+                q: question, 
+                a: "I'm having a little trouble connecting right now. Please try again in a moment!" 
+            }]))
         } finally {
             setLoading(false)
         }

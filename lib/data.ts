@@ -37,7 +37,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "XR Technical Intern",
+    title: "XR Developer Intern",
     location: "Mesh Labs, Arizona State University, Tempe, AZ",
     description:
       "Built and tested multiplayer VR medical training simulations in Unity using C# and XR Toolkit, integrating triage, treatment, and rescue scenarios to enhance realism and collaborative team performance.",
@@ -62,7 +62,7 @@ export const experiencesData = [
     date: "August 2024 - May 2025",
   },
   {
-    title: "Website Development Intern",
+    title: "Website Developer Intern",
     location: "Aasma Technology Solutions, Ahmedabad, India",
     description:
       "Worked with AasmaTech during my final year Internship where I designed and developed the company's website using React.js and Node.js",
@@ -70,7 +70,7 @@ export const experiencesData = [
     date: "January 2024 - June 2024",
   },
   {
-    title: "Software Development Intern",
+    title: "Software Developer Intern",
     location: "Capgemini, Gandhinagar, India",
     description:
       "Collaborated on building a Python library using Flask for ABHA APIs, enabling secure handling of medical health records in compliance with healthcare protocols.",
@@ -78,7 +78,7 @@ export const experiencesData = [
     date: "June 2023 - July 2023",
   },
   {
-    title: "Backend Development Intern",
+    title: "Backend Developer Intern",
     location: "Gainserv Technologies, Surat, India",
     description:
       "Developed dynamic web pages using EJS templates, integrated MongoDB databases and implemented user authentication.",
@@ -89,20 +89,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "GenAI Job Analyzer & Cold Email Agent",
+    description:
+      "A RAG-based AI agent that uses Playwright to scrape job descriptions, detects visa restrictions, and performs skill matching with ChromaDB to generate cold emails.",
+    tags: ["RAG", "LangChain", "Groq LLM", "ChromaDB","Streamlit"],
+    imageUrl: genAILLMImg, 
+    link: "https://github.com/Jem1D/GenAI-Job-Analyzer"
+  },
+  {
     title: "ASU-ccessful-Match",
     description:
       "Peer-learning platform using Zoom API for automated study session creation with personalized matching, one-click scheduling, and resource sharing.",
     tags: ["EdTech", "Zoom API", "Automation", "Peer Learning"],
     imageUrl: asuccessful,
     link: "https://asu-ccessful-match.vercel.app/"
-  },
-  {
-    title: "GenAI-LLM Email Generator",
-    description:
-      "A generative AI tool for automating personalized email creation using LangChain, Groq LLM, and ChromaDB, achieving 80% reduction in drafting time.",
-    tags: ["AI", "NLP", "LangChain", "Groq LLM", "ChromaDB"],
-    imageUrl: genAILLMImg,
-    link: "https://github.com/Jem1D/GenAI-LLM-email-generator"
   },
   {
     title: "Review Analysis of Food Delivery Apps",
