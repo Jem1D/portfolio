@@ -2,6 +2,8 @@ import { NextResponse } from "next/server"
 import { GoogleGenAI } from "@google/genai";
 import { projectsData, experiencesData, skillsData } from "@/lib/data"
 
+export const maxDuration = 60;
+
 export async function POST(req: Request) {
   try {
     const body = await req.json()
