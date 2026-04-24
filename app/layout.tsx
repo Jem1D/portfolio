@@ -21,6 +21,9 @@ const spaceMono = Space_Mono({
 export const metadata = {
   title: "Jemil | Personal Portfolio",
   description: "Jemil is a Software developer.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

@@ -95,7 +95,7 @@ export const projectsData = [
       "An event-driven financial intelligence system that streams stock ticks and headlines through Kafka, correlates price deviations with news, and uses a local LLM agent for analyst-style market summaries.",
     tags: ["Kafka", "Python", "Ollama", "PostgreSQL", "pgvector", "LLMs"],
     imageUrl: marketpulseImg,
-    link: "https://github.com/Jem1D"
+    link: "https://github.com/Jem1D/marketpulse"
   },
   {
     title: "GenAI Job Analyzer & Cold Email Agent",
