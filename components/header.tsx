@@ -14,52 +14,61 @@ export default function Header() {
   return (
     <header className="z-[999] relative">
       <motion.div
-        className="fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+        className="fixed left-1/2 top-0 z-[999] h-[5.75rem] w-full -translate-x-1/2 border-b-[3px] border-[var(--line-color)] bg-[var(--bg-strong)] px-4 sm:top-5 sm:h-[4.6rem] sm:w-[min(96%,72rem)] sm:rounded-xl sm:border-[3px] sm:px-6 sm:shadow-[6px_6px_0_0_var(--line-color)]"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
+      >
+        <div className="flex h-full flex-col justify-center gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+          <p className="mono hidden shrink-0 text-xs font-bold tracking-[0.16em] text-[var(--muted)] sm:block">
+            PORTFOLIO
+          </p>
 
-      <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
-          {links.map((link) => (
-            <motion.li
-              className="h-3/4 flex items-center justify-center relative"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-            >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-200":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
-
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
+          <nav className="w-full">
+            <ul className="flex flex-wrap items-center justify-center gap-1 text-[0.7rem] font-semibold uppercase tracking-[0.08em] text-[var(--muted)] sm:gap-2 sm:text-[0.76rem]">
+              {links.map((link) => (
+                <motion.li
+                  className="relative flex items-center justify-center"
+                  key={link.hash}
+                  initial={{ y: -100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                >
+                  <Link
+                    className={clsx(
+                      "relative z-10 flex w-full items-center justify-center rounded-md border-2 border-transparent px-2.5 py-1.5 transition hover:-translate-y-0.5 hover:text-[var(--ink)] sm:px-3 sm:py-2",
+                      {
+                        "text-[var(--ink)]": activeSection === link.name,
+                      }
+                    )}
+                    href={link.hash}
+                    onClick={() => {
+                      setActiveSection(link.name);
+                      setTimeOfLastClick(Date.now());
                     }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
+                  >
+                    {link.name}
+
+                    {link.name === activeSection && (
+                      <motion.span
+                        className="absolute inset-0 -z-10 rounded-md border-2 border-[var(--line-color)] bg-[var(--accent-gold)]"
+                        layoutId="activeSection"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 30,
+                        }}
+                      />
+                    )}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </nav>
+
+          <p className="mono hidden shrink-0 rounded-md border-2 border-[var(--line-color)] bg-[var(--accent-lime)] px-2 py-1 text-[10px] font-bold text-black sm:block">
+            STATUS: LIVE
+          </p>
+        </div>
+      </motion.div>
     </header>
   );
 }

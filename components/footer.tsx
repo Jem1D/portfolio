@@ -2,15 +2,16 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-gray-500">
-      <small className="mb-2 block text-xs">
-        &copy; 2025 Jemil. All rights reserved.
-      </small>
-      <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js, TypeScript, Tailwind CSS,
-        Framer Motion, React Email, Vercel hosting.
-      </p>
+    <footer className="mx-auto mb-12 mt-10 w-full max-w-6xl px-4 sm:px-6">
+      <div className="section-shell rounded-xl px-5 py-4 text-center">
+        <small className="mono mb-2 block text-xs uppercase tracking-[0.12em] text-[var(--muted)]">
+          &copy; 2026 Jemil Dharia. All rights reserved.
+        </small>
+        <p className="text-sm text-[var(--muted)]">
+          <span className="font-semibold text-[var(--ink)]">Build profile:</span>{" "}
+          Next.js, TypeScript, Tailwind CSS, Framer Motion, React Email, Vercel.
+        </p>
+      </div>
     </footer>
   );
 }

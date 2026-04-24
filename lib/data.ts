@@ -8,6 +8,7 @@ import cpuSimulatorImg from "@/public/cpuScheduling.png";
 import sparkFoodDelivery from "@/public/sparkFoodDelivery.png";
 import genAILLMImg from "@/public/genAILLMImg.png"
 import asuccessful from "@/public/asu-ccessfulMatch.png"
+import marketpulseImg from "@/public/marketpulse.png";
 export const links = [
   {
     name: "Home",
@@ -89,6 +90,14 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "MarketPulse",
+    description:
+      "An event-driven financial intelligence system that streams stock ticks and headlines through Kafka, correlates price deviations with news, and uses a local LLM agent for analyst-style market summaries.",
+    tags: ["Kafka", "Python", "Ollama", "PostgreSQL", "pgvector", "LLMs"],
+    imageUrl: marketpulseImg,
+    link: "https://github.com/Jem1D"
+  },
+  {
     title: "GenAI Job Analyzer & Cold Email Agent",
     description:
       "A RAG-based AI agent that uses Playwright to scrape job descriptions, detects visa restrictions, and performs skill matching with ChromaDB to generate cold emails.",
@@ -141,29 +150,45 @@ export const projectsData = [
 export const skillsData = [
   "Python",
   "C++",
-  "JAVA",
-  "Langchain",
-  "Databricks",
-  "CI/CD pipelines",
-  "HTML",
+  "C",
+  "C#",
+  "Java",
   "JavaScript",
   "TypeScript",
-  "REST APIs",
+  "HTML",
+  "CSS",
   "React",
-  "Express",
   "Next.js",
   "Node.js",
+  "Express",
   "Flask",
-  "Git",
-  "MongoDB",
-  "MySQL",
+  "FastAPI",
+  "Django",
+  "Streamlit",
   "AWS",
-  "Google Colaboratory",
-  "Apache Spark",
+  "Azure",
   "Docker",
-  "MS Office",
-  "VMWare Workstation",
-  "Agile"
+  "Kafka",
+  "CI/CD pipelines",
+  "Git",
+  "Firebase",
+  "PostgreSQL",
+  "MongoDB",
+  "Databricks",
+  "Apache Spark",
+  "TensorFlow",
+  "Pandas",
+  "NumPy",
+  "Matplotlib",
+  "Tableau",
+  "Power BI",
+  "LangChain",
+  "LLMs",
+  "RAG",
+  "Vector Databases",
+  "Claude Code",
+  "GitHub Copilot",
+  "Cursor",
 ] as const;
 
 

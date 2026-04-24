@@ -10,18 +10,21 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.5);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
+    <section
+      ref={ref}
+      id="projects"
+      className="section-shell mb-20 w-full max-w-5xl scroll-mt-28 rounded-2xl p-6 sm:p-10"
+    >
       <SectionHeading>My projects</SectionHeading>
       <div>
-      {projectsData.map((project, index) => (
-  <Project
-    key={index}
-    {...project}
-    index={index}
-    side={index % 2 === 0 ? "left" : "right"} // alternate sides
-  />
-))}
-
+        {projectsData.map((project, index) => (
+          <Project
+            key={index}
+            {...project}
+            index={index}
+            side={index % 2 === 0 ? "right" : "left"}
+          />
+        ))}
       </div>
     </section>
   );

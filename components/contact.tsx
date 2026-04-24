@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="section-shell mb-20 w-full max-w-5xl rounded-2xl p-6 text-center sm:mb-28 sm:p-10"
       initial={{
         opacity: 0,
       }}
@@ -31,7 +31,7 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="-mt-3 text-[var(--muted)]">
         Please contact me directly at{" "}
         <a className="underline" href="mailto:example@gmail.com">
           dhariajemil@gmail.com
@@ -40,7 +40,7 @@ export default function Contact() {
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mx-auto mt-10 flex max-w-2xl flex-col"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -53,7 +53,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 rounded-lg border-2 border-[var(--line-color)] bg-white px-4 shadow-[4px_4px_0_0_var(--line-color)] transition-all focus:-translate-y-0.5 focus:outline-none dark:bg-transparent"
           name="senderEmail"
           type="email"
           required
@@ -61,7 +61,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="my-3 h-52 rounded-lg border-2 border-[var(--line-color)] bg-white p-4 shadow-[4px_4px_0_0_var(--line-color)] transition-all focus:-translate-y-0.5 focus:outline-none dark:bg-transparent"
           name="message"
           placeholder="Your message"
           required

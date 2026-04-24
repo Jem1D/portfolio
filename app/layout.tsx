@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Space_Grotesk, Space_Mono } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
@@ -8,7 +8,15 @@ import ChatWidget from "@/components/chat-widget";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-const inter = Inter({ subsets: ["latin"] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+});
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+});
 
 export const metadata = {
   title: "Jemil | Personal Portfolio",
@@ -23,15 +31,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${spaceGrotesk.variable} ${spaceMono.variable} relative min-h-screen pt-32 font-[family-name:var(--font-space-grotesk)] text-[var(--ink)] sm:pt-44`}
       >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
+        <div className="pointer-events-none fixed inset-0 -z-10 opacity-30">
+          <div className="absolute -left-24 top-10 h-52 w-52 rounded-full bg-[var(--accent-cyan)] blur-3xl" />
+          <div className="absolute right-4 top-28 h-52 w-52 rounded-full bg-[var(--accent-pink)] blur-3xl" />
+          <div className="absolute bottom-12 left-1/3 h-44 w-44 rounded-full bg-[var(--accent-lime)] blur-3xl" />
+        </div>
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
-            {children}
+            <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">{children}</div>
             <Footer />
             <Toaster position="top-left" />
             <ChatWidget />
